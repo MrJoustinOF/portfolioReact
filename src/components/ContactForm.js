@@ -57,7 +57,7 @@ const ContactForm = (props) => {
       submitBtn.remove();
       errsDiv?.remove();
 
-      fetch("http://ur-apis-center.herokuapp.com/api/portfolio", {
+      fetch("https://ur-apis-center.herokuapp.com/api/portfolio", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
