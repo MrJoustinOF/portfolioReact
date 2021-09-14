@@ -13,7 +13,9 @@ const Navbar = (props) => {
       <nav className="bg-green-700 text-white p-4 flex justify-between items-center">
         <h1 className="text-2xl sm:text-3xl font-semibold inline-block">
           <img
-            src="./img/glasses.png"
+            width="0"
+            height="0"
+            src="./img/glasses.webp"
             alt="logo-joustin"
             className="inline-block w-9 sm:w-12 mr-2"
           />
@@ -21,7 +23,9 @@ const Navbar = (props) => {
         </h1>
 
         <img
-          src="./img/menu.png"
+          width="0"
+          height="0"
+          src="./img/menu.webp"
           alt="btn-menu"
           className="inline-block md:hidden w-12 m-0 p-0 cursor-pointer btnMenu"
           onClick={handleMenu}

@@ -3,7 +3,9 @@ const Footer = () => {
     <div className="md:flex justify-between bg-green-700 text-white p-4">
       <h1 className="text-2xl sm:text-3xl font-semibold inline-block">
         <img
-          src="./img/glasses.png"
+          width="0"
+          height="0"
+          src="./img/glasses.webp"
           alt="logo-joustin"
           className="inline-block w-9 sm:w-12 mr-2"
         />

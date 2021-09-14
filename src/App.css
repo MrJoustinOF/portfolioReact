@@ -20,7 +20,7 @@ html {
 }
 
 .hero {
-  background-image: url(./img/hero.jpg);
+  background-image: url(./img/hero.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }

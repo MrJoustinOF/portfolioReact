@@ -13,7 +13,13 @@ const English = () => {
       <Hero lang="en" />
 
       <div className="md:grid grid-cols-2 items-center" id="about">
-        <img src="./img/jous.png" alt="joustin-img" className="mx-auto w-80" />
+        <img
+          width="0"
+          height="0"
+          src="./img/jous.webp"
+          alt="joustin-img"
+          className="mx-auto w-80"
+        />
 
         <div className="pt-8 mx-8 md:mx-16">
           <h2 className="font-semibold text-2xl">Joustin Ortiz</h2>
@@ -38,8 +44,13 @@ const English = () => {
         <div className="mt-4 md:grid grid-cols-2">
           {servicesEn.map((service) => {
             return (
-              <div className="w-60 md:w-96 my-4 mx-auto border rounded-lg border-gray-300">
+              <div
+                key={service.id}
+                className="w-60 md:w-96 my-4 mx-auto border rounded-lg border-gray-300"
+              >
                 <img
+                  width="0"
+                  height="0"
                   src={service.img}
                   alt="service-img"
                   className="w-40 my-2 mx-auto"
@@ -66,13 +77,20 @@ const English = () => {
 
               return (
                 <div
+                  key={id}
                   className={
                     id > 2
                       ? "hidden hidden-card w-60 md:w-96 my-4 mx-auto border rounded-lg border-gray-300"
                       : "w-60 md:w-96 my-4 mx-auto border rounded-lg border-gray-300"
                   }
                 >
-                  <img src={img} alt="service-img" className="w-full p-2" />
+                  <img
+                    width="0"
+                    height="0"
+                    src={img}
+                    alt="service-img"
+                    className="w-full p-2"
+                  />
 
                   <div className="mx-4">
                     <h2 className="text-2xl font-semibold">{title}</h2>

@@ -12,7 +12,7 @@ const Espanol = () => {
       <Hero lang="es" />
 
       <div className="md:grid grid-cols-2 items-center" id="about">
-        <img src="./img/jous.png" alt="joustin-img" className="mx-auto w-80" />
+        <img src="./img/jous.webp" alt="joustin-img" className="mx-auto w-80" />
 
         <div className="pt-8 mx-8 md:mx-16">
           <h2 className="font-semibold text-2xl">Joustin Ortiz</h2>

@@ -92,7 +92,10 @@ const ContactForm = (props) => {
       </h2>
       <form onSubmit={handleSubmit} className="contactForm">
         <div className="my-4">
-          <label className="text-2xl flex justify-center md:justify-start">
+          <label
+            htmlFor="name"
+            className="text-2xl flex justify-center md:justify-start"
+          >
             {lang === "en" ? "Name" : ""}
             {lang === "es" ? "Nombre" : ""}
           </label>
@@ -100,34 +103,45 @@ const ContactForm = (props) => {
             className="mt-1 w-60 md:w-72 h-12 p-2 text-black block mx-auto md:mx-0"
             value={name}
             onChange={(data) => setName(data.target.value)}
+            name="name"
+            id="name"
           />
         </div>
 
         <div className="my-4">
-          <label className="text-2xl flex justify-center md:justify-start">
+          <label
+            htmlFor="email"
+            className="text-2xl flex justify-center md:justify-start"
+          >
             Email
           </label>
           <input
             className="mt-1 w-60 md:w-72 h-12 p-2 text-black block mx-auto md:mx-0"
             value={email}
             onChange={(data) => setEmail(data.target.value)}
+            name="email"
+            id="email"
           />
         </div>
 
         <div className="mt-4">
-          <label className="text-2xl flex justify-center md:justify-start">
+          <label
+            htmlFor="message"
+            className="text-2xl flex justify-center md:justify-start"
+          >
             {lang === "en" ? "Message" : ""}
             {lang === "es" ? "Mensaje" : ""}
           </label>
           <textarea
-            name=""
-            id=""
+            name="message"
+            id="message"
             cols="30"
             rows="10"
             onChange={(data) => setMessage(data.target.value)}
+            defaultValue={message}
             className="mt-1 w-60 md:w-72 p-2 text-black block mx-auto md:mx-0"
           >
-            {message}
+            {/* {message} */}
           </textarea>
         </div>
 
