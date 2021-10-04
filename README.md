@@ -1,3 +1,3 @@
 # My Portfolio in React
 
-https://ortizjoustin.netlify.app/
+https://ortizjoustin.vercel.app/
