@@ -3,13 +3,14 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-const ProjectsCarousel = ({ projects }) => {
+const ProjectsCarousel = ({ projects, lang }) => {
   return (
     <Fragment>
       <OwlCarousel
         className="owl-theme"
         loop
-        autoPlay
+        autoplay
+        autoplayTimeout={2000}
         autoplayHoverPause
         margin={10}
         responsive={{
@@ -46,16 +47,18 @@ const ProjectsCarousel = ({ projects }) => {
                       <a
                         href={github}
                         target="BLANK"
-                        className="block w-full bg-green-700 my-2 text-white font-semibold text-lg p-2 rounded-lg text-center"
+                        className="block w-full bg-green-700 hover:bg-green-800 my-2 text-white font-semibold text-lg p-2 rounded-lg text-center transition-all"
                       >
-                        View on Github
+                        {lang === "en" ? "View on Github" : ""}
+                        {lang === "es" ? "Ver en Github" : ""}
                       </a>
                       <a
                         href={url}
                         target="BLANK"
-                        className="block w-full bg-green-700 my-2 text-white font-semibold text-lg p-2 rounded-lg text-center"
+                        className="block w-full bg-green-700 my-2 hover:bg-green-800 text-white font-semibold text-lg p-2 rounded-lg text-center transition-all"
                       >
-                        View project
+                        {lang === "en" ? "View project" : ""}
+                        {lang === "es" ? "Ver proyecto" : ""}
                       </a>
                     </div>
                   </div>

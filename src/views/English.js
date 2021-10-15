@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "./../components/Navbar";
 import Hero from "./../components/Hero";
 import { servicesEn, projectsEn } from "./../data";
@@ -71,7 +72,7 @@ const English = () => {
             My own projects I've made
           </h2>
 
-          <ProjectsCarousel projects={projectsEn} />
+          <ProjectsCarousel projects={projectsEn} lang="en" />
 
           <span id="contact"></span>
           <ContactForm lang="en" />

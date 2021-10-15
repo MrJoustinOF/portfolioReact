@@ -1,16 +1,28 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = (props) => {
-  const { lang } = props;
+const Navbar = ({ lang }) => {
+  const [status, setStatus] = useState(false);
 
   const handleMenu = () => {
     const menu = document.querySelector(".menu-responsive");
     let nav = document.querySelector(".nav-bg");
     let responsiveNav = document.querySelector(".menu-responsive");
+    const theme = document.querySelector("#theme");
+
+    if (!status) {
+      setStatus(true);
+      nav.classList.add("bg-green-700");
+      responsiveNav.classList.add("bg-green-700");
+      theme.content = "#065f46";
+    } else {
+      setStatus(false);
+      nav.classList.remove("bg-green-700");
+      responsiveNav.classList.remove("bg-green-700");
+      theme.content = "#1F1D19";
+    }
 
     menu.classList.toggle("hidden");
-    nav.classList.toggle("bg-green-700");
-    responsiveNav.classList.toggle("bg-green-700");
   };
 
   return (

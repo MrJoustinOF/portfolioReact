@@ -1,6 +1,4 @@
-const Hero = (props) => {
-  const { lang } = props;
-
+const Hero = ({ lang }) => {
   return (
     <div className="hero min-h-screen">
       <div className="min-h-screen filter-hero flex justify-center items-center">

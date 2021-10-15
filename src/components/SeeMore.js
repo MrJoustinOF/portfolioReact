@@ -1,6 +1,4 @@
-const SeeMore = (props) => {
-  const { lang } = props;
-
+const SeeMore = ({ lang }) => {
   const handleSeeMore = () => {
     const seeMoreBtn = document.querySelector("#seeMore");
     const cardsHidden = document.querySelectorAll(".hidden-card");

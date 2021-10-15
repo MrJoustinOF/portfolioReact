@@ -62,7 +62,7 @@ const Espanol = () => {
             Proyectos propios que he hecho
           </h2>
 
-          <ProjectsCarousel projects={projectsEs} />
+          <ProjectsCarousel projects={projectsEs} lang="es" />
 
           <span id="contact"></span>
           <ContactForm lang="es" />
