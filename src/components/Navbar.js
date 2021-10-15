@@ -5,12 +5,17 @@ const Navbar = (props) => {
 
   const handleMenu = () => {
     const menu = document.querySelector(".menu-responsive");
+    let nav = document.querySelector(".nav-bg");
+    let responsiveNav = document.querySelector(".menu-responsive");
+
     menu.classList.toggle("hidden");
+    nav.classList.toggle("bg-green-700");
+    responsiveNav.classList.toggle("bg-green-700");
   };
 
   return (
     <div className="navbar">
-      <nav className="bg-green-700 text-white p-4 flex justify-between items-center">
+      <nav className="nav-bg text-white p-4 flex justify-between items-center transition-all">
         <h1 className="text-2xl sm:text-3xl font-semibold inline-block">
           <img
             width="0"
@@ -33,25 +38,25 @@ const Navbar = (props) => {
 
         <div className="hidden md:inline-block text-xl menu">
           <ul className="inline-block">
-            <li className="inline-block mx-2">
+            <li className="inline-block mx-2 lineEffect">
               <a href="#home">
                 {lang === "en" ? "Home" : ""}
                 {lang === "es" ? "Inicio" : ""}
               </a>
             </li>
-            <li className="inline-block mx-2">
+            <li className="inline-block mx-2 lineEffect">
               <a href="#about">
                 {lang === "en" ? "About me" : ""}
                 {lang === "es" ? "Sobre mi" : ""}
               </a>
             </li>
-            <li className="inline-block mx-2">
+            <li className="inline-block mx-2 lineEffect">
               <a href="#work">
                 {lang === "en" ? "My work" : ""}
                 {lang === "es" ? "Mi trabajo" : ""}
               </a>
             </li>
-            <li className="inline-block">
+            <li className="inline-block lineEffect">
               <a href="#contact">
                 {lang === "en" ? "Contact" : ""}
                 {lang === "es" ? "Contacto" : ""}
@@ -60,7 +65,7 @@ const Navbar = (props) => {
             <li className="inline-block">
               <div className="inline-block">
                 <div className="dropdown inline-block relative">
-                  <button className="bg-green-700 text-white font-semibold py-2 px-4 rounded inline-flex items-center">
+                  <button className=" text-white font-semibold py-2 px-4 rounded inline-flex items-center">
                     <span className="mr-1">
                       {lang === "en" ? "Language" : ""}
                       {lang === "es" ? "Idioma" : ""}
@@ -104,27 +109,27 @@ const Navbar = (props) => {
       </nav>
 
       {/* Responsive Menu */}
-      <div className="hidden menu-responsive bg-green-700 text-white text-xl text-center">
+      <div className="hidden menu-responsive text-white text-xl text-center transition-all">
         <ul>
-          <li className="mx-2 mb-2">
+          <li className="mx-2 mb-2 lineEffect">
             <a href="#home">
               {lang === "en" ? "Home" : ""}
               {lang === "es" ? "Inicio" : ""}
             </a>
           </li>
-          <li className="mx-2 my-2">
+          <li className="mx-2 my-2 lineEffect">
             <a href="#about">
               {lang === "en" ? "About me" : ""}
               {lang === "es" ? "Sobre mi" : ""}
             </a>
           </li>
-          <li className=" mx-2 my-2">
+          <li className=" mx-2 my-2 lineEffect">
             <a href="#work">
               {lang === "en" ? "My work" : ""}
               {lang === "es" ? "Mi trabajo" : ""}
             </a>
           </li>
-          <li className="mx-2 my-2">
+          <li className="mx-2 my-2 lineEffect">
             <a href="#contact">
               {lang === "en" ? "Contact" : ""}
               {lang === "es" ? "Contacto" : ""}
@@ -133,7 +138,7 @@ const Navbar = (props) => {
           <li className="">
             <div className="">
               <div className="dropdown inline-block relative">
-                <button className="bg-green-700 text-white font-semibold py-2 px-4 rounded inline-flex items-center">
+                <button className=" text-white font-semibold py-2 px-4 rounded inline-flex items-center">
                   <span className="mr-1">
                     {lang === "en" ? "Language" : ""}
                     {lang === "es" ? "Idioma" : ""}

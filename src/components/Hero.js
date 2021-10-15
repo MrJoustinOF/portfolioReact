@@ -2,8 +2,8 @@ const Hero = (props) => {
   const { lang } = props;
 
   return (
-    <div className="hero">
-      <div className="filter-hero flex justify-center items-center">
+    <div className="hero min-h-screen">
+      <div className="min-h-screen filter-hero flex justify-center items-center">
         <h2 className="text-white text-3xl font-semibold">
           {lang === "en" ? "Hi, I'm Joustin" : ""}
           {lang === "es" ? "Hola, soy Joustin" : ""}.

@@ -1,7 +1,7 @@
 import Navbar from "./../components/Navbar";
 import Hero from "./../components/Hero";
 import { servicesEn, projectsEn } from "./../data";
-import SeeMore from "./../components/SeeMore";
+import ProjectsCarousel from "./../components/ProjectsCarousel";
 import ContactForm from "./../components/ContactForm";
 import Footer from "./../components/Footer";
 
@@ -42,24 +42,24 @@ const English = () => {
         <h2 className="text-center font-semibold text-3xl">My services</h2>
 
         <div className="mt-4 md:grid grid-cols-2">
-          {servicesEn.map((service) => {
+          {servicesEn.map(({ id, img, title, category, description }) => {
             return (
               <div
-                key={service.id}
+                key={id}
                 className="w-60 md:w-96 my-4 mx-auto border rounded-lg border-gray-300"
               >
                 <img
                   width="0"
                   height="0"
-                  src={service.img}
+                  src={img}
                   alt="service-img"
                   className="w-40 my-2 mx-auto"
                 />
 
                 <div className="mx-4">
-                  <h2 className="text-2xl font-semibold">{service.title}</h2>
-                  <p className="text-lg text-gray-500">{service.category}</p>
-                  <p className="text-justify">{service.description}</p>
+                  <h2 className="text-2xl font-semibold">{title}</h2>
+                  <p className="text-lg text-gray-500">{category}</p>
+                  <p className="text-justify">{description}</p>
                 </div>
               </div>
             );
@@ -70,56 +70,9 @@ const English = () => {
           <h2 className="text-center font-semibold text-3xl">
             My own projects I've made
           </h2>
-          <div className="mt-4 md:grid grid-cols-3">
-            {projectsEn.map((project) => {
-              const { id, img, title, category, description, url, github } =
-                project;
 
-              return (
-                <div
-                  key={id}
-                  className={
-                    id > 2
-                      ? "hidden hidden-card w-60 md:w-96 my-4 mx-auto border rounded-lg border-gray-300"
-                      : "w-60 md:w-96 my-4 mx-auto border rounded-lg border-gray-300"
-                  }
-                >
-                  <img
-                    width="0"
-                    height="0"
-                    src={img}
-                    alt="service-img"
-                    className="w-full p-2"
-                  />
+          <ProjectsCarousel projects={projectsEn} />
 
-                  <div className="mx-4">
-                    <h2 className="text-2xl font-semibold">{title}</h2>
-                    <p className="text-lg text-gray-500">{category}</p>
-                    <p className="text-justify">{description}</p>
-
-                    <div>
-                      <a
-                        href={github}
-                        target="BLANK"
-                        className="block w-full bg-green-700 my-2 text-white font-semibold text-lg p-2 rounded-lg text-center"
-                      >
-                        View on Github
-                      </a>
-                      <a
-                        href={url}
-                        target="BLANK"
-                        className="block w-full bg-green-700 my-2 text-white font-semibold text-lg p-2 rounded-lg text-center"
-                      >
-                        View project
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          <SeeMore lang="en" />
           <span id="contact"></span>
           <ContactForm lang="en" />
           <Footer />

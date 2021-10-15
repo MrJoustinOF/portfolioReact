@@ -64,6 +64,15 @@ export const projectsEn = [
   },
   {
     id: 2,
+    title: "urResourcesNetwork",
+    description: `The place where everyone can publish every resource they want, this webapp was built in the MERN Stack (MongoDB, Express, React, Node)`,
+    img: "./img/urrn.webp",
+    category: "Web Development",
+    url: "https://urrn.vercel.app/",
+    github: "https://github.com/MrJoustinOF/urrn",
+  },
+  {
+    id: 3,
     title: "urToDoList",
     description: `A simple SPA project built in Angular and TailwindCSS, to add a few tasks yo have to do`,
     img: "./img/urtdl.webp",
@@ -72,7 +81,7 @@ export const projectsEn = [
     github: "https://github.com/MrJoustinOF/ur-ToDo-list",
   },
   {
-    id: 3,
+    id: 4,
     title: "urFavEatery",
     description: `This is a concept of a restaurant web, built in React  and TailwindCSS`,
     img: "./img/urfe.webp",
@@ -81,7 +90,7 @@ export const projectsEn = [
     github: "https://github.com/MrJoustinOF/urfaveatery",
   },
   {
-    id: 4,
+    id: 5,
     title: "urFrontStore",
     description: `Concept of a t-shirt's store, built in Vue and SCSS / SASS`,
     img: "./img/urfs.webp",
@@ -115,6 +124,15 @@ export const projectsEs = [
   },
   {
     id: 2,
+    title: "urResourcesNetwork",
+    description: `El lugar donde todos pueden publicar cada recurso que quieran, esta webapp fue hecha en el stack MERN (MongoDB, Express, React, Node)`,
+    img: "./img/urrn.webp",
+    category: "Desarrollo Web",
+    url: "https://urrn.vercel.app/",
+    github: "https://github.com/MrJoustinOF/urrn",
+  },
+  {
+    id: 3,
     title: "urToDoList",
     description: `Un simple proyecto SPA hecho en Angular y TailwindCSS para agregar unas cuentas tareas que tengas que hacer`,
     img: "./img/urtdl.webp",
@@ -133,6 +151,15 @@ export const projectsEs = [
   },
   {
     id: 4,
+    title: "urFavEatery",
+    description: `Este es un concepto de una web de un restaurante, hecho en React y TailwindCSS`,
+    img: "./img/urfe.webp",
+    category: "Web Development",
+    url: "https://urfaveatery.netlify.app/",
+    github: "https://github.com/MrJoustinOF/urfaveatery",
+  },
+  {
+    id: 5,
     title: "urFrontStore",
     description: `Concepto de una tienda de camisetas, hecho en Vue y SCSS / SASS`,
     img: "./img/urfs.webp",
